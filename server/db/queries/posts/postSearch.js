@@ -1,4 +1,4 @@
-const { pool } = require('../config/connection');
+const { pool } = require('../../config/connection');
 
 function searchPost(searchTrem) {
   const { searchTerm } = searchTrem;
