@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-const { Pool } = require('../config/connection');
+const { Pool } = require('../../config/connection');
 
 const addPost = (
   {

@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+font-family: 'Dongle';
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-item {
+    height: 97vh;
+    text-align: center;
+}
+
+p {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    margin-left: 9%;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.continue {
+    font-size: 20px;
+    display: block;
+    width: 250px;
+    height: 30px;
+    margin-top: 5px;
+    border-color: darkgrey;
+    border-width: 1px;
+    background-color: transparent;
+    border-radius: 15px;
+    margin-left: 19%;
+}
+
+.spanLine {
+    height: 10px;
+    width: 60px;
+    color: #878a8c;
+}
+
+.divDivider {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+input {
+    
+    font-size: 20px;
+    height: 40px;
+    margin-left: 20%;
+  margin-top: 7px;
+    width: 250px;
+    border-color: #a7abae;
+    background-color: #fcfcfb;
+    border-radius: 4px;
+    display: block;
+    
+
+}
+input:placeholder-shown{
+padding-left: 12px;
+}
+
+.loginBtn {
+    font-size: 20px;
+    border-radius: 4px;
+    width: 250px;
+    height: 40px;
+    margin-left: 11%;
+    margin-top: 7px;
+    font-weight: bold;
+    border-style: none;
+    color: white;
+    background-color: #0079D3;
+
+}
+.loginBtn:hover {
+    font-size: 20px;
+    border-radius: 4px;
+    width: 250px;
+    height: 40px;
+    margin-left: 11%;
+    margin-top: 7px;
+    font-weight: bold;
+    border-style: none;
+    color: white;
+    cursor: pointer;
+    background-color: #e4a216;
+}
+.forgot{
+    text-align: left;
+    margin-left: 22%;
+    font-size: 17px;
+}
+.signupLink{
+    margin-top: 4px;
+    text-align: left;
+    margin-left: 22%;
+    font-size: 19px;
+}

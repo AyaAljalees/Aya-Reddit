@@ -1,0 +1,58 @@
+* {
+    font-family: 'Dongle';
+}
+
+body {
+    width: 99%;
+    height: 100%;
+}
+
+.inputSearch {
+    width: 500px;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 15px;
+    border-width: 0.5px;
+}
+
+.inputSearch:hover {
+    width: 500px;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 15px;
+    border-width: 0.5px;
+    border-color: #0079D3;
+}
+
+.navbar {
+    margin-left: 18%;
+}
+
+#getApp {
+    font-size: 18px;
+    width: 100px;
+    height: 30px;
+    border-width: 1px;
+    color: #0079D3;
+    background-color: transparent;
+    border-color: #0079D3;
+    border-radius: 15px;
+}
+
+#loginBtn {
+    font-size: 18px;
+    background-color: #0079D3;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-width: 0px;
+    border-radius: 15px;
+    border-width: 0px;
+}
+
+#loginBtn a {
+    font-weight: bold;
+    color: white;
+    margin-top: 15%;
+    text-decoration: none;
+}
