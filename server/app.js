@@ -1,6 +1,17 @@
 const express = require('express');
+const compression = require('compression');
+const cookieParse = require('cookie-parser');
+const { join } = require('path');
 const { PORT } = require('./config');
+const router = require('./routes/router');
 
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+// app.use(compression());
+app.disabled('x-powered-by');
+app.use(cookieParse());
+// app.use(router);
+app.use(express.static(join(__dirname, '..', 'frontend')));
 app.set('port', PORT);
 module.exports = app;

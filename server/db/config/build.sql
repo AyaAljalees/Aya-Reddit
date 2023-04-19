@@ -23,7 +23,9 @@ CREATE TABLE votes (
     userId INTEGER NOT NULL,
     CONSTRAINT fk_userId FOREIGN KEY (userId) REFERENCES users(id),
     posts_id INTEGER NOT NULL,
-    CONSTRAINT fk_postId FOREIGN KEY (posts_id) REFERENCES posts(id) 
+    CONSTRAINT fk_postId FOREIGN KEY (posts_id) REFERENCES posts(id),
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+
 );
 CREATE TABLE comments (
     id INTEGER PRIMARY KEY ,

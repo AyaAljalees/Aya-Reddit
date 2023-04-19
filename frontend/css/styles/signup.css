@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'Dongle';
+font-family: 'Dongle';
 }
 
 .grid-container {
@@ -51,22 +51,21 @@ a {
 }
 
 input {
-
+    
     font-size: 20px;
     height: 40px;
     margin-left: 20%;
-    margin-top: 7px;
+  margin-top: 7px;
     width: 250px;
     border-color: #a7abae;
     background-color: #fcfcfb;
     border-radius: 4px;
     display: block;
-
+    
 
 }
-
-input:placeholder-shown {
-    padding-left: 12px;
+input:placeholder-shown{
+padding-left: 12px;
 }
 
 .loginBtn {
@@ -82,7 +81,6 @@ input:placeholder-shown {
     background-color: #0079D3;
 
 }
-
 .loginBtn:hover {
     font-size: 20px;
     border-radius: 4px;
@@ -96,14 +94,12 @@ input:placeholder-shown {
     cursor: pointer;
     background-color: #e4a216;
 }
-
-.forgot {
+.forgot{
     text-align: left;
     margin-left: 22%;
     font-size: 17px;
 }
-
-.signupLink {
+.signupLink{
     margin-top: 4px;
     text-align: left;
     margin-left: 22%;
