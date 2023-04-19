@@ -6,4 +6,4 @@ const postSchema = Joi.object({
   created_at: Joi.required(),
 });
 
-module.exports = postSchema;
+module.exports = { postSchema };
