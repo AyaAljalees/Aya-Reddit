@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const { PORT } = process.env || 6000;
+const { SECRET_KEY } = process.env;
 // eslint-disable-next-line camelcase
 const { Test_DB_URL, DEV_DB_URL, DB_URL } = process.env;
 const nodeEnv = process.env.NODE_ENV;
@@ -29,5 +30,5 @@ switch (nodeEnv) {
 }
 
 module.exports = {
-  PORT, dbUrl, ssl,
+  PORT, dbUrl, ssl, SECRET_KEY,
 };
