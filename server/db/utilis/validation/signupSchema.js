@@ -2,7 +2,7 @@ const Joi = require('joi');
 
 const signupSchema = Joi.object({
   username: Joi.string().alphanum().required().min(3)
-    .max(8),
+    .max(15),
   email: Joi.string().email({
     minDomainSegments: 2,
     tlds: { allow: ['com', 'net'] },

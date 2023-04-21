@@ -3,7 +3,8 @@ const { addPost } = require('./posts/addPost');
 const { deletePost } = require('./posts/deletePost');
 const { addUser } = require('./users/addUser');
 const { getPassword } = require('./users/getPassword');
-const { checkUser } = require('./users/checkUser');
+const { loginQuery } = require('./login/loginQuery');
+const { signupQuery } = require('./signup/signup');
 
 module.exports = {
   getAllPosts,
@@ -11,5 +12,6 @@ module.exports = {
   deletePost,
   addUser,
   getPassword,
-  checkUser,
+  loginQuery,
+  signupQuery,
 };

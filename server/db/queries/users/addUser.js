@@ -1,5 +1,5 @@
-const { Pool } = require('../../config/connection');
-const { hashPassword } = require('../../../middlewares/hash');
+const connection = require('../../config/connection');
+const { hashPassword } = require('../../utilis/hashPassword/hash');
 
 const addUser = (userInfo) => {
   const { userName, password, email } = userInfo;
@@ -13,7 +13,7 @@ const addUser = (userInfo) => {
         query: 'INSERT INTO users (userName, password, email) VALUES ($1,$2,$3) RETURNING *',
         values: [userName, hash, email],
       };
-      return Pool.query(sql);
+      return connection.query(sql);
     }
   });
 };
