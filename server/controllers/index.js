@@ -8,7 +8,7 @@ const { addPostFunction } = require('./posts/addPost');
 const { getAllPost } = require('./posts/getAllPost');
 const { search } = require('./posts/searchPost');
 const { addPage } = require('./posts/addPostPage');
-const checkAuth = require('./loginController/checkAuth');
+const checkAuth = require('../middlewares/checkAuth');
 
 module.exports = {
   mainPage,

@@ -1,6 +1,6 @@
 /* eslint-disable no-lonely-if */
 const jwt = require('jsonwebtoken');
-const { SECRET_KEY } = require('../../config');
+const { SECRET_KEY } = require('../config');
 
 const checkAuth = (req, res, next) => {
   const { token } = req.cookies;
