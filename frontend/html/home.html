@@ -10,15 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles/postStyle.css">
     <title>Document</title>
 </head>
 
 <body>
     <nav class="navbar">
+        <div class="search-div">
         <input type="text" class="inputSearch" placeholder="Search reddit">
+        <button type="button" class="searchBtn">search</button>
+    </div>
     </nav>
-
-    <div><a href="/post">add post</a></div>
+    <div class="postContainer"></div>
+    <div><a href="/addPost">add post</a></div>
+    <script src="../javascript/fetch.js"></script>
 </body>
 
 </html>
