@@ -14,4 +14,5 @@ module.exports = {
   getPassword,
   loginQuery,
   signupQuery,
+
 };
