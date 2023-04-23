@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 const bcrypt = require('bcrypt');
 const { sign } = require('jsonwebtoken');
 const { loginQuery } = require('../../db/queries');
@@ -14,6 +15,8 @@ const login = (req, res) => {
   loginQuery(username)
     // eslint-disable-next-line consistent-return
     .then((response) => {
+      const user = response.rows[0];
+      req.myToken = user;
       if (!response.rows.length) {
         res.status(400).send('you need to create a new account').redirect('/signup');
       } else {
@@ -21,15 +24,18 @@ const login = (req, res) => {
         return bcrypt.compare(password, hashPassword);
       }
     }).then((result) => {
+      const { id, username } = req.myToken;
       if (result) {
         sign(
           {
+            id,
             username,
+
           },
           SECRET_KEY,
           (err, token) => {
             res.cookie('token', token);
-            res.redirect('/');
+            res.redirect('/post');
           },
         );
       } else {
