@@ -10,43 +10,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <title>login</title>
 </head>
 
 <body>
+
     <div class="grid-container">
 
-        <img class="grid-item" src="https://www.redditstatic.com/accountmanager/bbb584033aa89e39bad69436c504c9bd.png"
-            alt="">
         <div class="grid-item">
             <h1>Log in</h1>
-            <p>By continuing, you agree to our <a href="">User Agreement</a> and <a href="">Privacy Policy</a> .</p>
-            <button class="continue"> Continue with Google</button>
-            <button class="continue"> Continue with Apple</button>
-            <div class="divDivider">
-                <span class="spanLine">______________</span>
-                <span class="spanLine">OR</span>
-                <span class="spanLine">______________</span>
-            </div>
             <form action="/login" method="post" class="form">
                 <div class="input-control">
-                    <input id="username" type="text" placeholder="UserName" name="username" required>
+
+                    <input id="username" type="text" placeholder="Username" name="username" required>
                     <div class="error"></div>
                 </div>
 
                 <div class="input-control">
-                    <input id="password" type="password" placeholder="PassWord" name="password" required>
+
+                    <input id="password" type="password" placeholder="Password" name="password" required>
                     <div class="error"></div>
 
                 </div>
                 <button class="loginBtn" type="submit">Log In</button>
-                <p class="forgot">Forgot your <a href="#">username</a> or <a href="#">password</a> ?</p>
+
                 <p class="signupLink">New to Reddit? <a href="./signup.html">SIGN UP</a></p>
+
             </form>
         </div>
-        <div class="grid-item"></div>
+
     </div>
-<script src="../javascript/loginValidation.js"></script>
+
+    <script src="../javascript/loginValidation.js"></script>
 </body>
 
 </html>

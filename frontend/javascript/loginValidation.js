@@ -24,7 +24,7 @@ const validateInputs = () => {
   const passwordValue = password.value.trim();
 
   if (usernameValue === '') {
-    setError(username, 'Username is required ----------------');
+    setError(username, 'Username is required ');
   } else if (usernameValue.length < 3) {
     setError(username, 'Username must be at least 3 character.');
   } else {
@@ -32,7 +32,7 @@ const validateInputs = () => {
   }
 
   if (passwordValue === '') {
-    setError(password, 'Password is required ----------------');
+    setError(password, 'Password is required ');
   } else if (passwordValue.length < 8) {
     setError(password, 'Password must be at least 8 character.');
   } else {
