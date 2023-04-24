@@ -6,7 +6,7 @@ const checkAuth = (req, res, next) => {
   const { token } = req.cookies;
   jwt.verify(token, SECRET_KEY, (err, decodedToken) => {
     if (err) {
-      res.status(404).json('you must be logged in');
+      res.status(404).redirect('/login');
     } else {
       if (token) {
         req.myToken = decodedToken;

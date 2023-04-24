@@ -35,7 +35,7 @@ const login = (req, res) => {
           SECRET_KEY,
           (err, token) => {
             res.cookie('token', token);
-            res.redirect('/getHomePage');
+            res.redirect('/');
           },
         );
       } else {
