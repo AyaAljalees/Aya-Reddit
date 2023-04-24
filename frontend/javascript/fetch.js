@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */
 /* eslint-disable no-unused-vars */
 
 const postImgv = document.querySelector('.image-input');
@@ -24,59 +25,56 @@ document.addEventListener('DOMContentLoaded', () => {
     ).catch((error) => console.log(error));
   });
 });
-const showPostFunction = (posts) => {
+
+function generatePost(posts) {
   const postDiv = document.createElement('div');
-  postDiv.classList.add('post');
+  postDiv.classList.add('col-lg-6', 'mb-4');
 
-  const postHeader = document.createElement('div');
-  postHeader.classList.add('post-header');
+  const postCard = document.createElement('div');
+  postCard.classList.add('card');
 
-  const userInfo = document.createElement('div');
-  userInfo.classList.add('user-info');
+  const postImageLink = document.createElement('a');
+  postImageLink.href = '#';
 
-  const userProfilePic = document.createElement('img');
-  userProfilePic.src = '../css/images/stick-man.png';
+  const postImage = document.createElement('img');
+  postImage.classList.add('card-img-top');
+  postImage.src = posts.image_url;
+  postImage.alt = '...';
 
-  const userDetails = document.createElement('div');
-  userDetails.classList.add('user-details');
+  postImageLink.appendChild(postImage);
 
-  const userName = document.createElement('h2');
-  userName.textContent = posts.username;
+  const postCardBody = document.createElement('div');
+  postCardBody.classList.add('card-body');
 
-  const postDate = document.createElement('p');
-  // eslint-disable-next-line prefer-destructuring
+  const postDate = document.createElement('div');
+  postDate.classList.add('small', 'text-muted');
   postDate.textContent = posts.created_at.split('T')[0];
 
-  userDetails.appendChild(userName);
-  userDetails.appendChild(postDate);
-
-  userInfo.appendChild(userProfilePic);
-  userInfo.appendChild(userDetails);
-
-  postHeader.appendChild(userInfo);
-
-  const postContent = document.createElement('div');
-  postContent.classList.add('post-content');
-
-  const postTitle = document.createElement('h3');
+  const postTitle = document.createElement('h2');
+  postTitle.classList.add('card-title', 'h4');
   postTitle.textContent = posts.title;
 
   const postText = document.createElement('p');
+  postText.classList.add('card-text');
   postText.textContent = posts.content;
 
-  const postImage = document.createElement('img');
-  postImage.classList.add('post-image');
-  postImage.src = posts.image_url;
+  const postReadMore = document.createElement('a');
+  postReadMore.classList.add('btn', 'btn-primary');
+  postReadMore.href = '#!';
+  postReadMore.textContent = 'Read more →';
 
-  postContent.appendChild(postTitle);
-  postContent.appendChild(postText);
-  postContent.appendChild(postImage);
-  postDiv.appendChild(postHeader);
-  postDiv.appendChild(postContent);
+  postCardBody.appendChild(postDate);
+  postCardBody.appendChild(postTitle);
+  postCardBody.appendChild(postText);
+  postCardBody.appendChild(postReadMore);
+
+  postCard.appendChild(postImageLink);
+  postCard.appendChild(postCardBody);
+
+  postDiv.appendChild(postCard);
 
   return postDiv;
-};
-
+}
 document.addEventListener('DOMContentLoaded', () => {
   const postContainer = document.querySelector('.postContainer');
 
@@ -85,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then((result) => {
       postContainer.textContent = '';
       result.forEach((item) => {
-        postContainer.appendChild(showPostFunction(item));
+        postContainer.appendChild(generatePost(item));
       });
     });
 });
@@ -106,7 +104,7 @@ searchButton.addEventListener('click', () => {
       const handle = (postss) => {
         postContainer.textContent = '';
         postss.forEach((post) => {
-          postContainer.appendChild(showPostFunction(post));
+          postContainer.appendChild(generatePost(post));
         });
       };
       handle(posts);

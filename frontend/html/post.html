@@ -10,33 +10,60 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
   <link rel="stylesheet" href="../css/styles/addPost.css">
+  <link rel="stylesheet" href="../css/styles/styles.css">
   <title>post</title>
 </head>
 
 <body>
 
-  <div class="form-container">
-    <h1 id="form-title">Add Post</h1>
-    <div class="eleDiv">
-      <div class="form-group">
-        <label for="post-title">Title:</label>
-        <input type="text" placeholder="Add title" class="title-input">
-      </div>
-      <div class="form-group">
-        <label for="post-content">Content:</label>
-        <textarea type="text" placeholder="Text (optional)" class="content-input"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="post-image-url">Image URL:</label>
-        <input type="text" placeholder="Image url (optional)" class="image-input">
-      </div>
-      <button onclick="window.location.href='/getHomePage'" type="button" id="submit-post">+</button>
-    </div>
-  </div>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
 
-  </div>
-  <script src="../javascript/fetch.js"></script>
-</body>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="/login" id="logout">logout</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">post</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="addPostCart">
+      <h1 id="form-title">Add Post</h1>
+      <div class="eleDiv">
+        <div class="form-group">
+          <label for="post-title">Title:</label>
+          <input type="text" placeholder="Add title" class="title-input">
+        </div>
+        <div class="form-group">
+          <label for="post-content">Content:</label>
+          <textarea type="text" placeholder="Text (optional)" class="content-input"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="post-image-url">Image URL:</label>
+          <input type="text" placeholder="Image url (optional)" class="image-input">
+        </div>
+        <button onclick="window.location.href='/'" type="button" id="submit-post">+</button>
+      </div>
+    </div>
+
+    </div>
+    <div style="height: 500px;"></div>
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
+      </div>
+    </footer>
+    <script src="../javascript/fetch.js"></script>
+    <script src="../javascript/logoutFetch.js"></script>
+  </body>
 
 </html>
