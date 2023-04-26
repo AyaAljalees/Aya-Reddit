@@ -30,6 +30,7 @@
     "test": "tests"
   },
   "scripts": {
+    "start": "node server/index.js",
     "test": "cross-env NODE_ENV=test jest",
     "buildDB": "cross-env NODE_ENV=development ",
     "build-DB": "cross-env NODE_ENV=production ",
