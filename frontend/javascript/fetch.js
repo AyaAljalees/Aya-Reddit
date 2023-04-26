@@ -79,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
               },
               body: JSON.stringify({
                 content_comments: comment,
-                userId: item.userid,
                 posts_id: item.id,
               }),
             })
