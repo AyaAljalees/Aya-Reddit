@@ -74,13 +74,13 @@ input:placeholder-shown {
 
 .loginBtn {
     position: relative;
-    top: -10px;
+ 
     border-radius: 20px;
     width: 250px;
     height: 50px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5px;
+    top: 10px;
     font-weight: bold;
     border-style: none;
     color: #eeded9;
@@ -132,12 +132,13 @@ p {
     height: 13px;
     position: relative;
     left: 85px;
-    top: -40px
+    top: -40px ;
+    max-width: 80%;
 }
 
 .signupLink {
     position: relative;
-    top: -33px;
+    top: -13px;
     font-size: 1em;
     font-weight: bold;
 }

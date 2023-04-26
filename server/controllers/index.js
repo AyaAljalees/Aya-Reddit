@@ -9,6 +9,7 @@ const { getAllPost } = require('./posts/getAllPost');
 const { search } = require('./posts/searchPost');
 const { addPage } = require('./posts/addPostPage');
 const checkAuth = require('../middlewares/checkAuth');
+const { addCommentFunction } = require('./commentController/addComment');
 
 module.exports = {
   mainPage,
@@ -23,4 +24,5 @@ module.exports = {
   checkAuth,
   getHomePage,
   addPage,
+  addCommentFunction,
 };

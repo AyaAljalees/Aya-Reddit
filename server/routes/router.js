@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const {
   login, signup, getLogin, getSignup, addPostFunction, addPage, getHomePage,
-  search, checkAuth, getAllPost, logout,
+  search, checkAuth, getAllPost, logout, addCommentFunction,
 } = require('../controllers');
 
 router.get('/signup', getSignup);
@@ -15,6 +15,7 @@ router.post('/login', login);
 router.get('/login', getLogin);
 router.post('/logout', logout);
 router.use(checkAuth);
+router.post('/addComment', addCommentFunction);
 router.get('/addPost', addPage);
 router.post('/addPost', addPostFunction);
 

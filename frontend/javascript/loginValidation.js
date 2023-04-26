@@ -30,11 +30,14 @@ const validateInputs = () => {
   } else {
     setSuccess(username);
   }
-
+  const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/;
+  const isValid = passwordPattern.test(passwordValue);
   if (passwordValue === '') {
     setError(password, 'Password is required ');
   } else if (passwordValue.length < 8) {
     setError(password, 'Password must be at least 8 character.');
+  } else if (isValid === false) {
+    setError(password, 'Password must contain at least one lowercase letter, one uppercase letter, one digit, and one special character (!@#$%^&*)');
   } else {
     setSuccess(password);
   }

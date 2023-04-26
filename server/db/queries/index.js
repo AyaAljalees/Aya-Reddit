@@ -1,10 +1,13 @@
 const { getAllPosts } = require('./posts/getAllPost');
 const { addPost } = require('./posts/addPost');
 const { deletePost } = require('./posts/deletePost');
+const { searchPost } = require('./posts/search');
 const { addUser } = require('./users/addUser');
 const { getPassword } = require('./users/getPassword');
 const { loginQuery } = require('./login/loginQuery');
 const { signupQuery } = require('./signup/signup');
+const { getAllCommentsQuery } = require('./comments/getAllComments');
+const { addComment } = require('./comments/addComment');
 
 module.exports = {
   getAllPosts,
@@ -14,5 +17,7 @@ module.exports = {
   getPassword,
   loginQuery,
   signupQuery,
-
+  getAllCommentsQuery,
+  searchPost,
+  addComment,
 };
