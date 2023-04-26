@@ -6,7 +6,7 @@ const { SECRET_KEY } = process.env;
 const { Test_DB_URL, DEV_DB_URL, DB_URL } = process.env;
 const nodeEnv = process.env.NODE_ENV;
 let dbUrl;
-let ssl = false;
+let ssl = true;
 if (!nodeEnv) {
   throw new Error('invalid node environment');
 }

@@ -1212,3 +1212,16 @@ button {
   position: relative;
   left: 10%
 }
+#comment-input{
+  padding: 2px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+#comment-button{
+  border: none;
+  position: relative;
+  border-radius: 10px;
+  background-color: rgba(150, 67, 48, 0.492)
+}
