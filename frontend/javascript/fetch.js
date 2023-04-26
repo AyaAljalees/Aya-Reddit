@@ -25,6 +25,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const postCardBody = document.createElement('div');
         postCardBody.classList.add('card-body');
+        const userInfoSection = document.createElement('section');
+        userInfoSection.classList.add('userInfo');
+        const userImg = document.createElement('img');
+        userImg.src = item.userImg || '../css/images/user.png';
+        userImg.alt = 'userImage';
+        const username = document.createElement('p');
+        username.textContent = item.username;
+        username.classList.add('user_name');
+
+        userInfoSection.appendChild(userImg);
+        userInfoSection.appendChild(username);
 
         const postDate = document.createElement('div');
         postDate.classList.add('small', 'text-muted');
@@ -41,11 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const addCommentSection = document.createElement('section');
         addCommentSection.classList.add('add-comment');
         const commentInput = document.createElement('input');
+        commentInput.id = 'comment-input';
         commentInput.type = 'text';
         const addCommentButton = document.createElement('button');
+        addCommentButton.id = 'comment-button';
         addCommentButton.textContent = 'add comment';
         addCommentSection.appendChild(commentInput);
         addCommentSection.appendChild(addCommentButton);
+        postCardBody.appendChild(userInfoSection);
         postCardBody.appendChild(postDate);
         postCardBody.appendChild(postTitle);
         postCardBody.appendChild(postText);
@@ -69,14 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 posts_id: item.id,
               }),
             })
-              .then((response) => response.json())
-              .then((result) => {
-                if (result.success) {
-                  const commentP = document.createElement('p');
-                  commentP.textContent = comment;
-                  postCardBody.appendChild(commentP);
-                  commentInput.value = '';
-                }
+              .then(() => {
+                const commentDiv = document.createElement('div');
+                commentDiv.id = 'commentDiv';
+                const commentP = document.createElement('p');
+                commentP.id = 'commentP';
+                commentP.textContent = comment;
+                commentDiv.appendChild(commentP);
+                postCardBody.appendChild(commentDiv);
+                commentInput.value = '';
               });
             commentInput.value = '';
           }
