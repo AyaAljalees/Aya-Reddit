@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
   <link rel="stylesheet" href="../css/styles/addPost.css">
   <link rel="stylesheet" href="../css/styles/styles.css">
@@ -19,7 +20,7 @@
 <body>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
       <div class="container">
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -35,34 +36,34 @@
         </div>
       </div>
     </nav>
-
+    
+<form action ="/addPost" method="post">
     <div class="addPostCart">
       <h1 id="form-title">Add Post</h1>
       <div class="eleDiv">
         <div class="form-group">
           <label for="post-title">Title:</label>
-          <input type="text" placeholder="Add title" class="title-input">
+          <input type="text" placeholder="Add title" class="title-input" name="title">
         </div>
         <div class="form-group">
           <label for="post-content">Content:</label>
-          <textarea type="text" placeholder="Text (optional)" class="content-input"></textarea>
+          <textarea type="text" placeholder="Text (required)" class="content-input" required name="content"></textarea>
         </div>
         <div class="form-group">
           <label for="post-image-url">Image URL:</label>
-          <input type="text" placeholder="Image url (optional)" class="image-input">
+          <input type="text" placeholder="Image url (required)" class="image-input" required name ="image_url">
         </div>
-        <button onclick="window.location.href='/'" type="button" id="submit-post">+</button>
+        <button type="submit" id="submit-post">+</button>
       </div>
     </div>
-
+  </form>
     </div>
     <div style="height: 500px;"></div>
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-light">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
       </div>
     </footer>
-    <script src="../javascript/fetch.js"></script>
     <script src="../javascript/logoutFetch.js"></script>
   </body>
 

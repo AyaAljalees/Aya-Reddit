@@ -19,8 +19,8 @@ CREATE TABLE posts(
  
 );
 CREATE TABLE votes (
-    id INTEGER PRIMARY KEY ,
-    voteType TEXT NOT NULL,
+    id SERIAL PRIMARY KEY ,
+    vote_status BOOLEAN NOT NULL,
     userId INTEGER NOT NULL,
     CONSTRAINT fk_userId FOREIGN KEY (userId) REFERENCES users(id),
     posts_id INTEGER NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE votes (
 
 );
 CREATE TABLE comments (
-    id INTEGER PRIMARY KEY ,
+    id SERIAL PRIMARY KEY ,
     content_comments TEXT NOT NULL ,
     userId INTEGER NOT NULL,
     CONSTRAINT fk_userId FOREIGN KEY (userId) REFERENCES users(id),

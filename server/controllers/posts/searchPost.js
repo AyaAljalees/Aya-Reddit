@@ -1,4 +1,4 @@
-const { searchPost } = require('../../db/queries/posts/search');
+const { searchPost } = require('../../db/queries');
 
 const search = (req, res) => {
   searchPost(req.body)
