@@ -10,6 +10,7 @@ const { search } = require('./posts/searchPost');
 const { addPage } = require('./posts/addPostPage');
 const checkAuth = require('../middlewares/checkAuth');
 const { addCommentFunction } = require('./commentController/addComment');
+const getComments = require('./commentController/getAllPostComments');
 const { addVotes } = require('./votes/PostVotes');
 const { getVotes } = require('./votes/getVote');
 const { getUserPosts } = require('./profile/getProfile');
@@ -33,4 +34,5 @@ module.exports = {
   getVotes,
   getUserPosts,
   userProfilePage,
+  getComments,
 };
